@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Params from './components/Params';
+import Questions from './components/Questions';
+import { useSelector } from 'react-redux';
+import Results from './components/Results';
 
-function App() {
+const App = () => {
+
+  const questionsReducer = useSelector(state => state.questionReducer)
+  const params = useSelector(state => state.paramsReducer)
+  const questions = questionsReducer[0]
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h2 className='app-title'>The Quizz</h2>
+      {params ? (
+        questions && params ? (
+          params[0].questionIndex < questions.length ? (
+            <Questions quest={questions[params[0].questionIndex]} params={params[0].cat} nb={params[0].questionIndex} dif={params[0].dif} />
+          ) : (
+            <Results />
+          )
+        ) : null
+      ) : (
+        <Params />
+      )}
     </div>
   );
-}
+};
 
 export default App;
