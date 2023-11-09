@@ -1,13 +1,32 @@
 
-body{
-    margin: 0px;
-}
+
 
 .app{
-    background: $background;
     color: $text-color;
+    text-align: center;
+    font-family: $font1;
+}
+
+.app-title{
+    font-size: $font-size-title;
 }
 
 .btn{
     background: $btn-color;
+    color: $btn-text;
+    width: 140px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
+
+.btn-text{
+    margin-top: 16px;
+}
+

@@ -1,0 +1,70 @@
+
+
+.game-params{
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+    font-size: 12px;
+    margin-top: -15px;
+}
+
+.category{
+    border: 1px solid $text-color;
+    padding: 5px;
+    border-radius: 5px;
+}
+.difficulty{
+    border: 1px solid $text-color;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.points{
+    position: absolute;
+    right: 10%;
+    top: 12.5%;
+    font-weight: bold;
+    font-size: 32px;
+
+    span{
+        font-size: 18px;
+    
+    }
+}
+
+h3{
+    margin-top: 30px;
+}
+
+.question{
+    margin: 20px 10px 40px 10px;
+    font-weight: bold;
+}
+
+.answer-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.answer{
+    flex-basis: 33%;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.correct{
+    background-color: $correct-color;
+}
+.incorrect{
+    background-color: $false-color;
+}
+
+.answer-result{
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+.congrats{
+    margin-top: 40px;
+}

@@ -1,0 +1,29 @@
+
+.result{
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.total-points{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.past-game-params{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.parameter{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    width: 180px;
+    margin: auto;
+}

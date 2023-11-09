@@ -1,4 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Nunito&family=Nunito+Sans:opsz@6..12&display=swap');
+
 
 $background: linear-gradient(to bottom, #A41FE2,#6F16DF);
 $text-color : #FFFFFF;
+$selected-color:rgba(255, 255, 255, 0.37);
 $btn-color: #F2F612;
+$btn-text:#A41FE2;
+$correct-color: rgb(5, 211, 5);
+$false-color:rgb(218, 3, 3);
+
+$font1 : ("Nunito Sans"),sans-serif;
+
+$font-size-title : 42px;
+$font-size-question: 32px;
+$font-size-text: 24px;
+
+
+body{
+    margin: 0px;
+    background: $background;
+    height: 100vh;
+}
+
+
+

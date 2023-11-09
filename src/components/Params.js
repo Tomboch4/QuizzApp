@@ -11,10 +11,11 @@ const Params = () => {
     const [difficulty,setDifficulty] = useState("")
     const [difficultyName,setDifficultyName] = useState("")
 
+
     const categories = [
         { key: "9", value: "Generale Knowledge" },
         { key: "15", value: "Video Games" },
-        { key: "11", value: "Moovie" },
+        { key: "11", value: "Movie" },
         { key: "17", value: "Science & Nature" },
         { key: "21", value: "Sports" },
         { key: "22", value: "Geography" },
@@ -34,13 +35,16 @@ const Params = () => {
     
 
     const handleCategorieChoose = (key,value) =>{
+
         setCategory(key)
         setCategoryName(value)
     }
     const handleNbQuestChoose = (ques) =>{
+
         setNbQuestion(ques)
     }
     const handleDifficultyChoose = (dif,value) =>{
+
         setDifficulty(dif)
         setDifficultyName(dif,value)
     }
@@ -58,26 +62,49 @@ const Params = () => {
 
     return (
         <div className='params-page'>
-            <div className="categorie-container">
+            <div className="params-container">
                 <label>Select Category :</label>
-                <div className="categorie">
-                    {categories.map(cat=>(<div key={cat.key} onClick={()=> handleCategorieChoose(cat.key,cat.value)}>{cat.value}</div>))}
+                <div className="params categorie">
+                    {categories.map(cat => (
+                        <div
+                            className={`item ${category === cat.key ? 'selected' : ''}`}
+                            key={cat.key}
+                            onClick={() => handleCategorieChoose(cat.key, cat.value)}
+                        >
+                            {cat.value}
+                        </div>
+                    ))}
                 </div>
             </div>
-            <div className="nb-question-container">
-                <label >Number of questions :</label>
-                <div className="nb-question">
-                    {nbQuestions.map(ques=>(<div  onClick={()=> handleNbQuestChoose(ques)}>{ques}</div>))}
+            <div className="params-container">
+                <label>Number of questions :</label>
+                <div className="params nb-question">
+                    {nbQuestions.map(ques => (
+                        <div
+                            className={`item ${nbQuestion === ques ? 'selected' : ''}`}
+                            onClick={() => handleNbQuestChoose(ques)}
+                        >
+                            {ques}
+                        </div>
+                    ))}
                 </div>
             </div>
-            <div className="difficulty-container">
+            <div className="params-container">
                 <label>Level :</label>
-                <div className="difficulty">
-                    {difficulties.map(dif=>(<div  key={dif.key} onClick={()=> handleDifficultyChoose(dif.key,dif.value)}>{dif.value}</div>))}
+                <div className="params dif">
+                    {difficulties.map(dif => (
+                        <div
+                            className={`item ${difficulty === dif.key ? 'selected' : ''}`}
+                            key={dif.key}
+                            onClick={() => handleDifficultyChoose(dif.key, dif.value)}
+                        >
+                            {dif.value}
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="btn" onClick={handleGetQuestion}>
-                Start the quizz
+                <div className="btn-text">Start the quizz</div> 
             </div>
         </div>
     );

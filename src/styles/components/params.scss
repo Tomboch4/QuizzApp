@@ -1,0 +1,25 @@
+label{
+    font-size: 28px;
+}
+
+.params-container{margin: 20px 10px;}
+
+.params{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.item{
+    border: 1px solid $text-color;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 45px;
+    cursor: pointer;
+}
+
+.selected{
+    background: $selected-color;
+}
