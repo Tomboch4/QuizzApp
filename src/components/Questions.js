@@ -50,7 +50,7 @@ const Questions = ({quest,params,nb,dif}) => {
             
             </div>
             <div className="points">{points.points} <span>pts</span></div>
-          <h3>Question n°: {nb+1}</h3>
+          <h3>Question n° {nb+1}</h3>
           <div className="question" >
             <Textfit style={{height:"80px"}} min={12} max={32}>
             {question}
@@ -58,7 +58,7 @@ const Questions = ({quest,params,nb,dif}) => {
           </div>
           <div className="answer-container">
             {answers.map((ans) => <div className={`answer ${alreadyAnswer ? (ans===correctAnswer ? 'correct' : 'incorrect'):''}`} onClick={()=>handleVerifAnswer(ans)}>
-              <Textfit style={{height:"40px", width:"80px", margin:"5px auto"} } min={8} max={28}>
+              <Textfit style={{height:"40px", width:"100px", margin:"5px auto"} } min={8} max={28}>
               {ans}
               </Textfit>
               </div>)}

@@ -6,23 +6,26 @@
     margin-left: 15px;
     font-size: 12px;
     margin-top: -15px;
+    
 }
 
 .category{
     border: 1px solid $text-color;
     padding: 5px;
     border-radius: 5px;
+    background: $selected-color;
 }
 .difficulty{
     border: 1px solid $text-color;
     padding: 5px;
     border-radius: 5px;
+    background: $selected-color;
 }
 
 .points{
     position: absolute;
     right: 10%;
-    top: 15%;
+    top: 10%;
     font-weight: bold;
     font-size: 32px;
 
@@ -43,12 +46,12 @@ h3{
 
 .answer-container{
     display: flex;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .answer{
-    flex-basis: 33%;
+    flex-basis: 40%;
     border: 1px solid white;
     border-radius: 5px;
     margin: 10px auto;
